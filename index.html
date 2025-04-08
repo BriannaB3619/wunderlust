@@ -54,9 +54,9 @@
 
         <!-- img -->
         <picture>
-            <source media="(min/max-width: 1264px)" srcset="images/majorca-cove-L.png">
-            <source media="(min/max-width: 900px)" srcset="images/majorca-cove-M.png">
-            <source media="(min/max-width: 675px)" srcset="images/majorca-cove-S.png">
+            <source media="(min-width: 1264px)" srcset="images/majorca-cove-L.png">
+            <source media="(max-width: 900px)" srcset="images/majorca-cove-M.png">
+            <source media="(max-width: 675px)" srcset="images/majorca-cove-S.png">
             <img alt="an air view of the waves, beach, and the greenery on shore" src="images/majorca-cove-L.png">
         </picture>
         
@@ -241,7 +241,7 @@
                 <input name="lname" type="text" id="lname" required>
                     
                 <!-- preferred contact method(phone text email radios) -->
-                <fieldset aria-required="true">
+                <fieldset>
                     <legend>Preferred Contact Method</legend>
                     <input name="contactmethod" type="radio" id="emailcontact">
                     <label for="emailcontact">Email</label>

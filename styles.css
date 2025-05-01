@@ -1,0 +1,163 @@
+/* Brianna Beasley */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Praise&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+--menu-and-p-font: "Roboto", sans-serif;
+--header-font:"Praise", cursive;
+--light-blue:#55bcd5;
+--deep-gray:#222222;
+--white: #fdfdfd;
+--sun-yellow:#f6d64a;
+--med-blue:#499bd2;
+--bright-purple:#9b26b0;
+}
+
+/* global styles */
+
+html{
+    background-image: linear-gradient(var(--light-blue), var(--white));
+}
+
+#skip{
+    display: none;
+}
+
+#logo{
+    width: auto;
+    height: 40px;
+    position: relative;
+    display: flex;
+}
+
+h1, h2, h3{
+    font-family: var(--header-font);
+}
+
+p, a, label{
+font-family: var(--menu-and-p-font);
+}
+
+h1{
+    font-size: 2rem;
+    margin:5px;
+}
+
+/* div for menu styles */
+#menu-toggle{
+    list-style-type: none;
+    display: block;
+  position: relative; 
+  z-index: 1; 
+}
+#menu-toggle ul{
+    background-color: var(--light-blue);
+    width:320px;
+    margin: 0;
+    padding: 0;
+}
+
+#menu-toggle input{
+    display: block;
+    width: 320px;
+    height: 60px;
+    position: absolute;
+    padding: 0;
+    top: -7px;
+  left: -5px;
+    cursor: pointer;  
+    opacity: 0; 
+    z-index: 2;
+    background-color: var(--deep-gray);
+    color: var(--deep-gray);
+}
+
+#menu-toggle label {
+    position: relative;
+    display: inline-flex;
+    width: 320px;
+    height: 60px;
+    background-color: var(--deep-gray);
+    color: var(--white);
+    align-items: center;
+    justify-content: center;
+}
+
+ul li{
+
+}
+
+/* menu links */
+#menu-toggle a{
+    text-decoration: none;
+    height: 60px;
+    justify-self: center;
+    align-content: center;
+  color:var(--deep-gray);
+  display:block;
+}
+
+
+
+/* mobile first styles */
+@media screen and (min-width:320px){
+
+
+
+}
+
+/* medium-large screen styles */
+@media screen and (max-width:1280px){
+
+
+
+}

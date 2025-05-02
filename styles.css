@@ -51,21 +51,23 @@ table {
 /* import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Praise&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* root variables */
 :root {
---menu-and-p-font: "Roboto", sans-serif;
---header-font:"Praise", cursive;
---light-blue:#55bcd5;
---deep-gray:#222222;
---white: #fdfdfd;
---sun-yellow:#f6d64a;
---med-blue:#499bd2;
---bright-purple:#9b26b0;
+    --menu-and-p-font: "Roboto", sans-serif;
+    --header-font:"Praise", cursive;
+    --light-blue:#55bcd5;
+    --deep-gray:#222222;
+    --white: #fdfdfd;
+    --sun-yellow:#f6d64a;
+    --med-blue:#499bd2;
+    --bright-purple:#9b26b0;
+    --light-gray:#e9e9e9;
 }
 
 /* global styles */
 
-html{
-    background-image: linear-gradient(var(--light-blue), var(--white));
+header{
+    background-image: linear-gradient(var(--light-blue) , var(--white));
 }
 
 #skip{
@@ -83,13 +85,14 @@ h1, h2, h3{
     font-family: var(--header-font);
 }
 
-p, a, label{
-font-family: var(--menu-and-p-font);
+p, a, label, h4, q, legend{
+    font-family: var(--menu-and-p-font);
 }
 
 h1{
     font-size: 2rem;
     margin:5px;
+    font-weight:600;
 }
 
 /* div for menu styles */
@@ -132,9 +135,7 @@ h1{
     justify-content: center;
 }
 
-ul li{
 
-}
 
 /* menu links */
 #menu-toggle a{
@@ -146,8 +147,312 @@ ul li{
   display:block;
 }
 
+nav a{
+    font-variant-caps: all-small-caps;
+    font-weight: 600;
+}
 
 
+#intro h2{
+    font-size:1.75rem;
+    font-weight: 600;
+    padding:7px;
+
+}
+
+.sr-only{
+    display:none;
+}
+
+header p, #intro p{
+    padding-bottom:30px;
+    display:inline-flex;
+    padding-left: 10px;
+}
+
+#img-grid{
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    width:auto;
+    grid-row-gap:15px;
+}
+
+#intro img{
+    width:320px;
+    height:auto;
+}
+
+
+#plan{
+    background-color: var(--sun-yellow);
+    padding:15px 10px;
+    margin-top:25px;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height:700px;
+}
+
+#plan h3{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+#plan section{
+    background-color: var(--light-blue);
+    border-radius: 5px;
+    border:solid 3px var(--white);
+    margin:10px;
+    width:170px;
+    height: 145px;
+    justify-items: center;
+    align-content: center;
+}
+
+#plan h4{
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-variant-caps: all-small-caps;
+    padding:3px 0px;
+}
+
+#plan section img{
+    width:100px;
+    height:auto;
+    margin:5px;
+}
+
+#testimonials{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+    height:1170px;
+
+}
+ 
+#testimonials h3{
+    padding:10px;
+    margin-top:25px;
+    height:50px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+#testimonials section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 7px 5px
+}
+#testimonials q{
+    width: 250px;
+    text-align: center;
+    font-style: italic;
+    padding-bottom:3px;
+}
+
+#testimonials img{
+    width:155px;
+    height:auto;
+}
+
+#testimonials h4{
+    padding:2px 3px;
+    font-variant-caps: all-small-caps ;
+    font-weight: 600; 
+    font-size: 1.4rem;
+}
+
+#testimonials p{
+font-weight: 300;
+}
+
+#about{
+    padding:0px 15px;
+    display:grid;
+    background-color: var(--med-blue);
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 3fr;
+
+}
+
+#about h3{
+    grid-column: 1/-1;
+    padding:2px 3px;
+    font-variant-caps: all-small-caps ;
+    font-weight: 600; 
+    font-size: 1.2rem;
+    width:113px;
+    text-align: justify;
+}
+#about div{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+#about img{
+    width:75px;
+    height:auto;
+}
+
+#about section:nth-child(1){
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-self: center;
+    align-content: center;
+}
+
+#about section:nth-child(2){
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: center;
+    align-content: center;
+}
+
+#about section:nth-child(3){
+    grid-column: 1/2;
+    grid-row: 2/3;
+    justify-self: center;
+    align-content: center;
+}
+
+#about section:nth-child(4){
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: center;
+    align-content: center;
+}
+
+#contact{
+    margin: 25px 5px;
+}
+
+#contact h3{
+font-size: 1.4rem;
+}
+
+.form-required{
+    font-family: var(--menu-and-p-font);
+    font-size:1rem;
+}
+
+form{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+form #names{
+display:grid;
+grid-template-columns:1fr;
+grid-template-rows: auto;
+padding: 5px 2px;
+justify-self: center;
+}
+
+form #nums{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows: auto;
+    padding: 5px 2px;
+    justify-self: center;
+}
+
+form #selects{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows: auto;
+    padding: 5px 2px;
+    justify-self: center;
+}
+
+form #custom-select{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows: auto;
+    padding: 5px 2px;
+    justify-self: center;
+}
+.required{
+    color: var(--bright-purple);
+}
+
+input, select{
+    border: 2px solid var(--bright-purple);
+    padding: 3px 2px;
+    
+   
+}
+
+input, select{ 
+    height:30px;
+    width: 280px;
+}
+
+label{
+display:flex;
+font-size: 600;
+}
+
+.radio-label{
+    padding-left:15px;
+    align-self: center;
+}
+
+input[type="radio"]{
+appearance: none;
+background-color: #fff;
+margin:0;
+font: inherit;
+color: var(--bright-purple);
+border: solid 2px var(--bright-purple);
+border-radius: 50%;
+height: 40px;
+width:40px;
+}
+
+input[type="radio"] {
+    display: grid;
+    place-content: center;
+  }
+
+input[type="radio"]::before {
+    content: "";
+    border-radius: 50%;
+    transform: scale(0);
+    
+}
+
+input[type="radio"]:checked{
+    transform: scale(1);
+    box-shadow: inset 30px 30px var(--bright-purple);
+}
+
+label{
+    font-variant-caps: all-small-caps;
+    padding-top: 8px;
+}
+
+#mySubmit{
+    background-color: var(--bright-purple);
+    color: var(--white);
+    font-variant-caps: all-small-caps;
+    font-size: 1.1rem;
+    margin:8px 0;
+    width:280px;
+    justify-self: center;
+    height:30px
+}
+
+
+footer{
+    display: grid;
+        text-align: center;
+        background-color: var(--light-gray);
+        height: 90px;
+}
 /* mobile first styles */
 @media screen and (min-width:320px){
 
